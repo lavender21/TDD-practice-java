@@ -6,8 +6,12 @@ public class Dollar {
     public Dollar times(int multiplier){
         return new Dollar(amount * multiplier);
     }
-    public boolean equals(Dollar dollar){
+
+    @Override
+    public boolean equals(Object o) {
+        Dollar dollar = (Dollar)o;
         return amount == dollar.amount;
     }
-    int amount;
+
+    private int amount;
 }
