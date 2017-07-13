@@ -3,7 +3,7 @@ public class France extends Money{
         this.amount = amount;
     }
 
-    public France times(int multiplier){
+    public Money times(int multiplier){
         return new France(amount * multiplier);
     }
 }

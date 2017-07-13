@@ -6,14 +6,14 @@ import static org.junit.Assert.*;
 public class FranceTest {
     @Test
     public void testMultiplication(){
-        France five = new France(5);
-        assertEquals(new France(10),five.times(2));
-        assertEquals(new France(15),five.times(3));
+        Money five = Money.france(5);
+        assertEquals(Money.france(10),five.times(2));
+        assertEquals(Money.france(15),five.times(3));
     }
 
     @Test
     public void testEquality(){
-        assertTrue(new France(5).equals(new France(5)));
-        assertFalse(new France(5).equals(new France(6)));
+        assertTrue(Money.france(5).equals(Money.france(5)));
+        assertFalse(Money.france(5).equals(Money.france(6)));
     }
 }
