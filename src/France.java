@@ -1,9 +1,9 @@
 public class France extends Money{
-    public France(int amount) {
-        this.amount = amount;
+    public France(int amount,String currency) {
+        super(amount,currency);
     }
 
     public Money times(int multiplier){
-        return new France(amount * multiplier);
+        return Money.france(amount * multiplier);
     }
 }
