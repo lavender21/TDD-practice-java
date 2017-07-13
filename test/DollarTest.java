@@ -15,6 +15,7 @@ public class DollarTest {
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));
         assertFalse(Money.dollar(5).equals(Money.dollar(6)));
         assertFalse(Money.dollar(5).equals(Money.france(5)));
+        assertTrue(new Money(5,"USD").equals(new Dollar(5,"USD")));
     }
 
 }
