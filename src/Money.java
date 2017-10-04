@@ -32,6 +32,9 @@ public class Money {
                 && currency().equals(money.currency());
     }
 
+    public Money plus(Money money){
+        return new Money(amount+money.amount,currency);
+    }
     public String toString() {
         return amount + ' ' + currency;
     }
