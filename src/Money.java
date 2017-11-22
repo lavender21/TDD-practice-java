@@ -1,5 +1,5 @@
 
-public class Money {
+public class Money implements Expression  {
 
     protected int amount;
     protected String currency;
@@ -32,7 +32,7 @@ public class Money {
                 && currency().equals(money.currency());
     }
 
-    public Money plus(Money money){
+    public Expression plus(Money money){
         return new Money(amount+money.amount,currency);
     }
     public String toString() {
