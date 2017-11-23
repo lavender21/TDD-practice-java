@@ -32,8 +32,12 @@ public class Money implements Expression  {
                 && currency().equals(money.currency());
     }
 
-    public Expression plus(Money money){
-        return new Money(amount+money.amount,currency);
+    public Expression plus(Money addend){
+        return new Sum(this, addend);
+    }
+
+    public Money reduce(String to) {
+        return this;
     }
     public String toString() {
         return amount + ' ' + currency;
